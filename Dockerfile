@@ -29,7 +29,7 @@ RUN COMPOSER_ALLOW_SUPERUSER=1 composer install
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
 # Expose port
-EXPOSE 9001
+EXPOSE 9000
 
 # Run Laravel
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=9001"]
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=9000"]
